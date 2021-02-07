@@ -26,7 +26,7 @@ const (
 	Female
 )
 
-// FromString parses a SSN as string and created a SwedishSsn.
+// FromString parses a SSN as string and creates a SwedishSsn.
 func FromString(ssn string) (SwedishSsn, error) {
 	cleanRe := regexp.MustCompile(`[^\d\+\-]`)
 	clean := cleanRe.ReplaceAllString(ssn, "")
